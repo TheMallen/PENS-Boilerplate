@@ -6,24 +6,28 @@
  </head>
  
   <body unresolved>
-     
+  <h1>
+    This page grabs from the api using polymer.
+  </h1>
 
-  <core-ajax id="ajax" 
+  <core-ajax
              auto 
-             url=""
+             url="http://localhost:3000/api/todoItems"
              handleAs="json">
   </core-ajax>
    
-  <template repeat="{{post in response}}">
-    <div>{{post}}</div>
+  <template repeat="{{response}}">
+    <div>{{text}}</div>
+      <div>{{createdAt}}</div>
+        <div>{{isDone}}</div>
   </template>
   
   <script>
     document.addEventListener('polymer-ready', function() {
-      var ajax = document.$.ajax;
+      var ajax = document.querySelector('core-ajax');
       ajax.addEventListener("core-response", 
         function(e) {
-          document.$.resultList.model = {
+          document.querySelector('template').model = {
             response: e.detail.response
           };
         }
