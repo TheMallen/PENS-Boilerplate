@@ -31,7 +31,7 @@ Sequelize and Epilogue team up to make creating routes super easy.
 ```javascript
    //db/models/post.js 
    module.exports = function (sequelize, DataTypes) {
-   var post = sequelize.define("post", {
+   var Post = sequelize.define("Post", {
      text: DataTypes.STRING,
      title: DataTypes.STRING
      }, {
@@ -40,13 +40,13 @@ Sequelize and Epilogue team up to make creating routes super easy.
         }
       }
     });
-    return TodoItem;
+    return Post;
   }
 ```
 - Add your resource to `api/index.js`
 ```javascript
-  var todoItems = rest.resource({
-      model: db.models.post,
+  var posts = rest.resource({
+      model: db.models.Post,
       endpoints: ['/posts', '/posts/:id'],
   });  
 ```
