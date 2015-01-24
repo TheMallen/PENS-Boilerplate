@@ -1,5 +1,5 @@
 {
-  "name": "todoApi",
+  "name": "my awesome PENS app",
   "version": "1.0.0",
   "description": "wip",
   "main": "app.js",
@@ -12,7 +12,7 @@
     "url": ""
   },
   "author": "Mathew Allen",
-  "license": "MIT",
+  "license": "Don't Be A Dick",
   "dependencies": {
     "body-parser": "^1.10.1",
     "epilogue": "^0.3.3",

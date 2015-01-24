@@ -16,6 +16,8 @@ function generateRoutes(db) {
       endpoints: ['/todoItems', '/todoItems/:id'],
   });
   
+  //ad resources here!
+  
   return router;
 }
 
